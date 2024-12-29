@@ -23,8 +23,10 @@ export default class User extends compose(BaseModel, AuthFinder) {
   declare password: string
 
   @column.dateTime({ autoCreate: true })
+  // @no-swagger
   declare createdAt: DateTime
 
   @column.dateTime({ autoCreate: true, autoUpdate: true })
+  // @no-swagger
   declare updatedAt: DateTime | null
 }
